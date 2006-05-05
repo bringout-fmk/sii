@@ -83,6 +83,7 @@ method mMenu()
 private Izbor
 private lPodBugom
 
+say_fmk_ver()
 
 nPom:=VAL(IzFmkIni("SET","Epoch","1945",KUMPATH))
 IF nPom>0
