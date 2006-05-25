@@ -7,4 +7,5 @@ PRGS=rpt_rk1.prg rpt_rjre.prg rpt_rjk.prg rpt_rjam.prg rpt_prj.prg rpt_mnu.prg r
 CS=
 ASMS=
 
+include $(SC_BUILD_HOME_DIR)/sclib/Makefile_clipper
 
