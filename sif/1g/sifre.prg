@@ -63,10 +63,12 @@ ImeKol:={ { PADR("ID",7),  {|| id },     "id"  , {|| .t.}, {|| vpsifra(wid)} },;
 Kol:={1,2}
 return PostojiSifra(F_KONTO,1,10,60,"Lista: Konta",@cId,dx,dy)
 
-***************************************
-***************************************
-function P_OS(cId,dx,dy)
-PRIVATE ImeKol,Kol
+
+function P_OS(cId, dx, dy)
+private ImeKol
+private Kol
+private fNovi := .t.
+
 ImeKol:={ { PADR("Inv.Broj",15),{|| id },     "id"   , {|| .t.}, {|| vpsifra(wid) .and. NeEdId()}    },;
           { PADR("Naziv",30),{|| naz},     "naz"      },;
           { PADR("Kolicina",8),{|| kolicina},    "kolicina"     },;
@@ -104,36 +106,38 @@ function v_vrijednost(wnabvr,wotpvr)
 return .t.
 
 
-************************
-************************
 function OSBlok(Ch)
+fNovi := .t.
 
-if Ch==K_CTRL_T
- O_PROMJ
- select promj
- seek os->id
- if found()
-   Beep(1)
-   Msg("Sitan inventar se ne moze brisati - prvo izbrisi promjene !")
- else
-   select os
-   if Pitanje(,"Sigurno zelite izbrisati ovaj sitni inventar ?","N")=="D"
-    delete
-   endif
- endif
- select promj; use
- select os
+do case
+	case (Ch==K_CTRL_T)
+ 		O_PROMJ
+ 		select promj
+ 		seek os->id
+ 		if found()
+   			Beep(1)
+   			Msg("Sitan inventar se ne moze brisati - prvo izbrisi promjene !")
+ 		else
+   			select os
+   			if Pitanje(,"Sigurno zelite izbrisati ovaj sitni inventar ?","N")=="D"
+    				delete
+   			endif
+ 		endif
+ 		select promj
+		use
+ 		select os
 
- //return DE_REFRESH
- return 7  // kao de_refresh, ali se zavrsava izvr{enje f-ja iz ELIB-a
-endif
+ 		return 7  
+		// kao de_refresh, ali se zavrsava 
+		// izvrsenje f-ja iz ELIB-a
+	case (Ch==K_F2)
+		fNovi := .f.
+endcase
 
 return DE_CONT
 
-***************************************
-***************************************
 function NeEdId()
-if !fnovi  .and. wid<>id
+if !fNovi  .and. wId<>id
    Beep(1)
    Msg("Promjenu inventurnog broja ne vrsiti ovdje !")
    return .f.
