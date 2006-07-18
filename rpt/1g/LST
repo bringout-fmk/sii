@@ -8,26 +8,26 @@ ZAGL3.............rpt_rjam          ZAGL4.............rpt_rjre
 ZGLK1.............rpt_rk1           ZGLPRJ............rpt_prj
 
 
-rpt_rk1           Offset: 00000010H  Code and data size: e74H
+rpt_rk1           Offset: 00000010H  Code and data size: e96H
   REKK1             TEKREC            ZGLK1           
 
-rpt_rjre          Offset: 00001380H  Code and data size: 1730H
+rpt_rjre          Offset: 000013c0H  Code and data size: 1755H
   PREGRJREV         ZAGL4           
 
-rpt_rjk           Offset: 00002f70H  Code and data size: 23e7H
+rpt_rjk           Offset: 00002fe0H  Code and data size: 2410H
   PREGRJKON         ZAGL2           
 
-rpt_rjam          Offset: 00005860H  Code and data size: 196fH
+rpt_rjam          Offset: 00005900H  Code and data size: 1999H
   PREGRJAM          ZAGL3           
 
-rpt_prj           Offset: 000076a0H  Code and data size: 109eH
+rpt_prj           Offset: 00007780H  Code and data size: 10baH
   PREGRJ            ZGLPRJ          
 
-rpt_mnu           Offset: 00008bd0H  Code and data size: 337H
+rpt_mnu           Offset: 00008ce0H  Code and data size: 337H
   IZVJ            
 
-rpt_kias          Offset: 000091e0H  Code and data size: 1c77H
+rpt_kias          Offset: 000092f0H  Code and data size: 1ca5H
   FFOR1             FSVPROMJ          PRKIAS          
 
-rpt_amst          Offset: 0000b3e0H  Code and data size: 17f6H
+rpt_amst          Offset: 0000b520H  Code and data size: 181dH
   PRRJAMST        
