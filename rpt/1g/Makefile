@@ -1,11 +1,11 @@
 VERZIJA=CDX
 MODUL=sii_1rpt
 
-SRCDOSROOT=c:\\dev\\fmk\\sii\\rpt\\1g\\
+SRCDOSROOT=$(BASEDOS)\\fmk\\sii\\rpt\\1g\\
 
 PRGS=rpt_rk1.prg rpt_rjre.prg rpt_rjk.prg rpt_rjam.prg rpt_prj.prg rpt_mnu.prg rpt_kias.prg rpt_amst.prg
 CS=
 ASMS=
 
-include $(SC_BUILD_HOME_DIR)/sclib/Makefile_clipper
+include ../../../fmk_lib/Makefile_clipper
 

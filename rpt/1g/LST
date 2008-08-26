@@ -17,17 +17,17 @@ rpt_rjre          Offset: 000013c0H  Code and data size: 1755H
 rpt_rjk           Offset: 00002fe0H  Code and data size: 2410H
   PREGRJKON         ZAGL2           
 
-rpt_rjam          Offset: 00005900H  Code and data size: 1999H
+rpt_rjam          Offset: 00005900H  Code and data size: 194fH
   PREGRJAM          ZAGL3           
 
-rpt_prj           Offset: 00007780H  Code and data size: 10baH
+rpt_prj           Offset: 00007730H  Code and data size: 10baH
   PREGRJ            ZGLPRJ          
 
-rpt_mnu           Offset: 00008ce0H  Code and data size: 337H
+rpt_mnu           Offset: 00008c90H  Code and data size: 337H
   IZVJ            
 
-rpt_kias          Offset: 000092f0H  Code and data size: 1ca5H
+rpt_kias          Offset: 000092a0H  Code and data size: 1c6bH
   FFOR1             FSVPROMJ          PRKIAS          
 
-rpt_amst          Offset: 0000b520H  Code and data size: 181dH
+rpt_amst          Offset: 0000b4b0H  Code and data size: 181dH
   PRRJAMST        

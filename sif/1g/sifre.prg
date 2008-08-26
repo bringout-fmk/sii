@@ -1,4 +1,4 @@
-#include "\dev\fmk\sii\sii.ch"
+#include "sii.ch"
 
 function Sifre()
 
